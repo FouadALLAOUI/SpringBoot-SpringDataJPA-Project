@@ -16,7 +16,7 @@ public class SpringBootSpringDataJpaApplication {
 
 	}
 
-	@Bean  // Transform Class to Bean
+	//@Bean  // Transform Class to Bean
 	public MyFirstClass myFirstClass(){
 		return new  MyFirstClass();
 	}
