@@ -12,7 +12,7 @@ public class SpringBootSpringDataJpaApplication {
 	public static void main(String[] args) {
 
 		var app = new  SpringApplication(SpringBootSpringDataJpaApplication.class);
-		app.setDefaultProperties(Collections.singletonMap("spring.profiles.active", "dev"));
+		app.setDefaultProperties(Collections.singletonMap("spring.profiles.active", "test"));
 
 		var ctx = app.run(args);
 
