@@ -3,10 +3,14 @@ package com.fouad.exemple;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.PropertySource;
+import org.springframework.context.annotation.PropertySources;
 import org.springframework.stereotype.Service;
 
 @Service
-@PropertySource("classpath:custom.properties")
+@PropertySources({
+        @PropertySource("classpath:custom.properties"),
+        @PropertySource("classpath:custom-file-2.properties")
+})
 public class MyFirstService {
 
     private  MyFirstClass myFirstClass;
@@ -14,6 +18,8 @@ public class MyFirstService {
     private String customProperty;
     @Value("${my.prop}") // Injection of values
     private String customPropertyFromAnotherFile;
+    @Value("${my.prop.2}")
+    private String customPropertyFromAnotherFile2;
     @Value("12345")
     private Integer customPropertyInt;
 
@@ -36,5 +42,9 @@ public class MyFirstService {
 
     public Integer getCustomPropertyInt() {
         return customPropertyInt;
+    }
+
+    public String getCustomPropertyFromAnotherFile2() {
+        return customPropertyFromAnotherFile2;
     }
 }
