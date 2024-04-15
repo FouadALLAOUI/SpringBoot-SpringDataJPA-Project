@@ -1,19 +1,23 @@
 package com.fouad.exemple;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
-import org.springframework.core.env.Environment;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.annotation.PropertySource;
 import org.springframework.stereotype.Service;
 
 @Service
+@PropertySource("classpath:custom.properties")
 public class MyFirstService {
 
     private  MyFirstClass myFirstClass;
+    @Value("Welcome -- ")
+    private String customProperty;
+    @Value("${my.prop}") // Injection of values
+    private String customPropertyFromAnotherFile;
+    @Value("12345")
+    private Integer customPropertyInt;
 
-    private Environment environment;
-
-    @Autowired // use this method as setter to use to inject the necessary bean
-    public void injectDependencies(@Qualifier("bean1") MyFirstClass myFirstClass){
+    public MyFirstService(@Qualifier("bean1") MyFirstClass myFirstClass) {
         this.myFirstClass = myFirstClass;
     }
 
@@ -21,24 +25,16 @@ public class MyFirstService {
         return "the dependency is saying : " +myFirstClass.sayHello();
     }
 
-    public String getJavaVersion(){
-        return environment.getProperty("java.version");
+
+    public String getCustomPropertyFromAnotherFile() {
+        return customPropertyFromAnotherFile;
     }
 
-    public String getOsName(){
-        return environment.getProperty("os.name");
+    public String getCustomProperty() {
+        return customProperty;
     }
 
-    public String getProp(){
-        return environment.getProperty("my.custom.property");
+    public Integer getCustomPropertyInt() {
+        return customPropertyInt;
     }
-
-
-    @Autowired  // Setter Injection for an environment object
-    public void setEnvironment(Environment environment) {
-        this.environment = environment;
-    }
-
-
-
 }
