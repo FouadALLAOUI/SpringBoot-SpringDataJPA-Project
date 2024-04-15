@@ -7,7 +7,7 @@ import org.springframework.stereotype.Service;
 @Service
 public class MyFirstService {
     @Autowired //Field Injection
-    @Qualifier("mySecondBean")
+    @Qualifier("bean1")
     private  MyFirstClass myFirstClass;
 
 /*    public MyFirstService(MyFirstClass myFirstClass) { //Constructor injection

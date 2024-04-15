@@ -8,7 +8,7 @@ import org.springframework.context.annotation.Primary;
 @Configuration // The spring boot will scan all the beans in the configuration class
 public class ApplicationConfig {
 
-    @Bean  // Transform Class to Bean
+    @Bean("bean1")  // Transform Class to Bean
     public MyFirstClass myFirstBean(){
         return new  MyFirstClass("First Bean");
     }
