@@ -12,6 +12,8 @@ public class SpringBootSpringDataJpaApplication {
 
 		MyFirstService myFirstService = ctx.getBean(MyFirstService.class); //get the bean
 		System.out.println(myFirstService.tellStory());
+		System.out.println(myFirstService.getJavaVersion());
+		System.out.println(myFirstService.getOsName());
 
 
 	}
