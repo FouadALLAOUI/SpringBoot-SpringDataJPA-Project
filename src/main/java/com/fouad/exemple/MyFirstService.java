@@ -9,7 +9,7 @@ public class MyFirstService {
 
     private final MyFirstClass myFirstClass;
 
-    public MyFirstService( @Qualifier("bean2") MyFirstClass myFirstClass) { //Constructor injection
+    public MyFirstService(MyFirstClass myFirstClass) { //Constructor injection
         this.myFirstClass = myFirstClass;
     }
 
