@@ -7,7 +7,7 @@ import org.springframework.stereotype.Service;
 public class MyFirstService {
 
     private final MyFirstClass myFirstClass;
-    @Autowired
+    @Autowired // Use the needed Beans
     public MyFirstService(MyFirstClass myFirstClass) { //Constructor injection
         this.myFirstClass = myFirstClass;
     }
