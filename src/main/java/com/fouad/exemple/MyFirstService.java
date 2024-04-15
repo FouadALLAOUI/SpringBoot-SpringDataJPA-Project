@@ -6,12 +6,12 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class MyFirstService {
+    @Autowired //Field Injection
+    private  MyFirstClass myFirstClass;
 
-    private final MyFirstClass myFirstClass;
-
-    public MyFirstService(MyFirstClass myFirstClass) { //Constructor injection
+/*    public MyFirstService(MyFirstClass myFirstClass) { //Constructor injection
         this.myFirstClass = myFirstClass;
-    }
+    }*/
 
     public String tellStory(){
         return "the dependency is saying : " +myFirstClass.sayHello();
