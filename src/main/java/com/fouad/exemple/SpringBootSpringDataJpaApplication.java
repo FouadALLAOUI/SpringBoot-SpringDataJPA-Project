@@ -14,6 +14,7 @@ public class SpringBootSpringDataJpaApplication {
 		System.out.println(myFirstService.tellStory());
 		System.out.println(myFirstService.getJavaVersion());
 		System.out.println(myFirstService.getOsName());
+		System.out.println(myFirstService.getProp());
 
 
 	}

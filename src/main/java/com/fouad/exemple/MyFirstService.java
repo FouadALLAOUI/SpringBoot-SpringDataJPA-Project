@@ -29,6 +29,11 @@ public class MyFirstService {
         return environment.getProperty("os.name");
     }
 
+    public String getProp(){
+        return environment.getProperty("my.custom.property");
+    }
+
+
     @Autowired  // Setter Injection for an environment object
     public void setEnvironment(Environment environment) {
         this.environment = environment;
