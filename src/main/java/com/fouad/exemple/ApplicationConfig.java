@@ -19,7 +19,7 @@ public class ApplicationConfig {
     }
 
     @Bean  // Transform Class to Bean
-    @Primary
+    //@Primary //Priority of Beans
     public MyFirstClass myThirdBean(){
         return new  MyFirstClass("Third Bean");
     }
