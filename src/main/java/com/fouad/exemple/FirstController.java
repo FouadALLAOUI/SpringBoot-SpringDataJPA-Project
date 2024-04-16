@@ -33,6 +33,16 @@ public class FirstController {
         return "My value is = "+userName;
     }
 
+    // Get with params
+    @GetMapping("/hello")
+    public String paramVar(
+            @RequestParam("user-name") String userName,
+            @RequestParam("user-lastname") String userLastName
+            ){
+        return "My value is = "+userName+" "+userLastName;
+    }
+
+
 
 
 }
