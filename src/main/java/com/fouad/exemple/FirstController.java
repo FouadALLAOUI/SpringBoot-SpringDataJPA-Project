@@ -18,6 +18,12 @@ public class FirstController {
 
     @PostMapping("/post-order")
     public String post(@RequestBody Order order){
+        // Use Setters and Getters
+        return "Request accepted an order : "+order.toString();
+    }
+
+    @PostMapping("/post-order-record")
+    public String postRecord(@RequestBody OrderRecord order){
         return "Request accepted an order : "+order.toString();
     }
 
