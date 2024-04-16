@@ -1,0 +1,18 @@
+#spring.application.name=SpringBoot-SpringDataJPA
+##the profiles are used to separate environment variables : the order matters
+#spring.profiles.active=test, dev, custom
+
+#my.custom.property = Welcome To RIODAN
+#my.custom.property.int = 12345
+
+#Configuration of database connection
+
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/demo-db
+    username: root
+    password:
+    driver-class-name: com.mysql.jdbc.Driver
+
+
+
