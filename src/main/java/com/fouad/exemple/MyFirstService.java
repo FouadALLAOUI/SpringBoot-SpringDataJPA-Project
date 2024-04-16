@@ -16,7 +16,7 @@ public class MyFirstService {
     private Integer customPropertyInt;
 
 
-    public MyFirstService(@Qualifier("mySecondBean") MyFirstClass myFirstClass) {
+    public MyFirstService(@Qualifier("bean1") MyFirstClass myFirstClass) {
         this.myFirstClass = myFirstClass;
     }
 

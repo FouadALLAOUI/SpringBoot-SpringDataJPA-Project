@@ -7,16 +7,17 @@ import org.springframework.context.annotation.Primary;
 import org.springframework.context.annotation.Profile;
 
 @Configuration // The spring boot will scan all the beans in the configuration class
+@Profile("dev") // All this configuration could be available just for dev environment
 public class ApplicationConfig {
 
     @Bean("bean1")  // Transform Class to Bean
-    @Profile("dev")  // Make this bean specific for the dev environment
+    //@Profile("dev")  // Make this bean specific for the dev environment
     public MyFirstClass myFirstBean(){
         return new  MyFirstClass("First Bean");
     }
 
     @Bean  // Transform Class to Bean
-    @Profile("test")
+    //@Profile("test")
     public MyFirstClass mySecondBean(){
         return new  MyFirstClass("Second Bean");
     }
