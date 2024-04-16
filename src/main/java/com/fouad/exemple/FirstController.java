@@ -16,31 +16,6 @@ public class FirstController {
         return "Request accepted an message : "+message;
     }
 
-    @PostMapping("/post-order")
-    public String post(@RequestBody Order order){
-        // Use Setters and Getters
-        return "Request accepted an order : "+order.toString();
-    }
-
-    @PostMapping("/post-order-record")
-    public String postRecord(@RequestBody OrderRecord order){
-        return "Request accepted an order : "+order.toString();
-    }
-
-    // Get method with variable
-    @GetMapping("/hello/{user-name}")
-    public String pathVar(@PathVariable("user-name") String userName){
-        return "My value is = "+userName;
-    }
-
-    // Get with params
-    @GetMapping("/hello")
-    public String paramVar(
-            @RequestParam("user-name") String userName,
-            @RequestParam("user-lastname") String userLastName
-            ){
-        return "My value is = "+userName+" "+userLastName;
-    }
 
 
 
