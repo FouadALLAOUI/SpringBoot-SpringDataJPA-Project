@@ -27,5 +27,12 @@ public class FirstController {
         return "Request accepted an order : "+order.toString();
     }
 
+    // Get method with variable
+    @GetMapping("/hello/{user-name}")
+    public String pathVar(@PathVariable("user-name") String userName){
+        return "My value is = "+userName;
+    }
+
+
 
 }
