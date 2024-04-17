@@ -1,5 +1,6 @@
 package com.fouad.exemple;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
@@ -17,6 +18,7 @@ public class School {
     @OneToMany(
             mappedBy = "school"
     )
+    @JsonManagedReference // Avoid Infinite recursion
     private List<Student> students;
 
     public School() {

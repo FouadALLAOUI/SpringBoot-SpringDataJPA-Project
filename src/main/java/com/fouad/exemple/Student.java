@@ -1,5 +1,6 @@
 package com.fouad.exemple;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.*;
 
 @Entity // map and represent tab in db
@@ -20,6 +21,7 @@ public class Student {
             mappedBy = "student", // same name of the var in studentprofile
             cascade = CascadeType.ALL //in case of delete
     )
+    @JsonBackReference // Avoid Infinite recursion
     private StudentProfile studentProfile;
 
     @ManyToOne
