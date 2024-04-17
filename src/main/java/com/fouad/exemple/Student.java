@@ -8,13 +8,13 @@ import jakarta.persistence.*;
 public class Student {
     @Id
     @GeneratedValue
-    private Integer id;
+     private Integer id;
     @Column(name = "c_fname", length = 20)
-    private String firstname;
+     private String firstname;
     //@Column
-    private String lastname;
+     private String lastname;
     @Column(unique = true)
-    private String email;
+     private String email;
     //@Column
     private int age;
     @OneToOne(
