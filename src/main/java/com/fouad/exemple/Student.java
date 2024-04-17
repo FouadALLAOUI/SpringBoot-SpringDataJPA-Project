@@ -16,8 +16,11 @@ public class Student {
     private String email;
     //@Column
     private int age;
-    @Column(updatable = false)
-    private String some_column;
+    @OneToOne(
+            mappedBy = "student", // same name of the var in studentprofile
+            cascade = CascadeType.ALL //in case of delete
+    )
+    private StudentProfile studentProfile;
 
     public Student() {
     }
