@@ -21,13 +21,13 @@ public class Student {
             mappedBy = "student", // same name of the var in studentprofile
             cascade = CascadeType.ALL //in case of delete
     )
-    @JsonBackReference // Avoid Infinite recursion
     private StudentProfile studentProfile;
 
     @ManyToOne
     @JoinColumn(
             name = "school_id"
     )
+    @JsonBackReference
     private School school;
 
     public Student() {

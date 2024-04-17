@@ -18,7 +18,7 @@ public class School {
     @OneToMany(
             mappedBy = "school"
     )
-    @JsonManagedReference // Avoid Infinite recursion
+    @JsonManagedReference
     private List<Student> students;
 
     public School() {
