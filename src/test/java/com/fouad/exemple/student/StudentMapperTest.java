@@ -1,5 +1,6 @@
 package com.fouad.exemple.student;
 
+import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
@@ -12,6 +13,12 @@ class StudentMapperTest {
     void setUp() {
         System.out.println("Before");
     }
+
+    @AfterEach
+    void tearDown() {
+        System.out.println("After");
+    }
+
     @Test
     public void testMethod1(){
         System.out.println("My First test method");
