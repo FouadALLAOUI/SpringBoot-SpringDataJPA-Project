@@ -6,29 +6,37 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class StudentMapperTest {
 
-    @BeforeAll
-    static void beforeAll() {
-        System.out.println("Before-All");
-    }
+    private StudentMapper mapper;
 
-    @BeforeEach // Run before running any test
+    @BeforeEach
     void setUp() {
-        System.out.println("Before");
-    }
-
-    @AfterEach
-    void tearDown() {
-        System.out.println("After");
+        mapper = new StudentMapper();
     }
 
     @Test
-    public void testMethod1(){
-        System.out.println("My First test method");
+    public void shouldMapStudentDtoToStudent(){
+
+        StudentDTO dto = new StudentDTO("Rio","Dan", "zez@hhz.com", 12);
+
+        Student student = mapper.toStudent(dto);
+
+        assertEquals(dto.firstname(), student.getFirstname());
+        assertEquals(dto.lastname(), student.getLastname());
+        assertEquals(dto.email(), student.getEmail());
+        assertNotNull(student.getSchool());
+        assertEquals(dto.schoolId(), student.getSchool().getId());
     }
 
     @Test
-    public void testMethod2(){
-        System.out.println("My Second test method");
+    public  void  shouldMapStudentToStudentResponseDTO(){
+        Student student = new Student("RIO", "DAN", "riodan@gmail.com", 24);
+        StudentResponseDto responseDto = mapper.tostudentResponseDto(student);
+
+        assertEquals(student.getFirstname(), responseDto.firstname());
+        assertEquals(student.getLastname(), responseDto.lastname());
+        assertEquals(student.getEmail(),responseDto.email());
+
     }
+
 
 }
