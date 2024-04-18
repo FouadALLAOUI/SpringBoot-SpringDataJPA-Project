@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class StudentMapper {
+
     public Student toStudent(StudentDTO dto){
         var student = new Student();
         student.setFirstname(dto.firstname());
@@ -27,4 +28,5 @@ public class StudentMapper {
                 student.getEmail()
         );
     }
+
 }
