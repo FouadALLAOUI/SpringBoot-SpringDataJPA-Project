@@ -1,4 +1,4 @@
-package com.fouad.exemple;
+package com.fouad.exemple.student;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;

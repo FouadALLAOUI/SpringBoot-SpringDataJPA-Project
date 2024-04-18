@@ -1,6 +1,6 @@
-package com.fouad.exemple;
+package com.fouad.exemple.student;
 
-import jakarta.persistence.criteria.CriteriaBuilder;
+import com.fouad.exemple.student.Student;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;

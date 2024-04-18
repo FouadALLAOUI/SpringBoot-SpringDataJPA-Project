@@ -1,6 +1,8 @@
-package com.fouad.exemple;
+package com.fouad.exemple.student;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fouad.exemple.studentprofile.StudentProfile;
+import com.fouad.exemple.school.School;
 import jakarta.persistence.*;
 
 @Entity // map and represent tab in db

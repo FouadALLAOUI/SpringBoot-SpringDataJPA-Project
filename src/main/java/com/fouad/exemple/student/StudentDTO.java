@@ -1,4 +1,4 @@
-package com.fouad.exemple;
+package com.fouad.exemple.student;
 
 public record StudentDTO(
     String firstname,

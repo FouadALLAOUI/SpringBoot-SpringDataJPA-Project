@@ -1,4 +1,4 @@
-package com.fouad.exemple;
+package com.fouad.exemple.school;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;

@@ -1,5 +1,6 @@
-package com.fouad.exemple;
+package com.fouad.exemple.studentprofile;
 
+import com.fouad.exemple.student.Student;
 import jakarta.persistence.*;
 
 @Entity

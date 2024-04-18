@@ -1,5 +1,7 @@
-package com.fouad.exemple;
+package com.fouad.exemple.school;
 
+import com.fouad.exemple.school.School;
+import com.fouad.exemple.school.SchoolDto;
 import org.springframework.stereotype.Service;
 
 @Service

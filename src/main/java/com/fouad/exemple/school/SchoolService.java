@@ -1,4 +1,4 @@
-package com.fouad.exemple;
+package com.fouad.exemple.school;
 
 import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.RequestBody;
