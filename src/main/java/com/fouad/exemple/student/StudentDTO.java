@@ -4,9 +4,9 @@ package com.fouad.exemple.student;
 import jakarta.validation.constraints.NotEmpty;
 
 public record StudentDTO(
-    @NotEmpty
+    @NotEmpty(message = "Firstname should not be empty")
     String firstname,
-    @NotEmpty
+    @NotEmpty(message = "Lastname should not be empty")
     String lastname,
     @NotEmpty
     String email,
